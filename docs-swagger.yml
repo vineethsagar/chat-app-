@@ -1,0 +1,37 @@
+openapi: "3.0.0"
+info:
+  title: Receipts API
+  version: "1.0"
+servers:
+  - url: http://localhost:8080/
+paths:
+  /receipts:
+    get:
+      responses:
+        "200":
+          description: OK
+    post:
+      responses:
+        "201":
+          description: OK
+  /receipts/:receiptId:
+    get:
+      responses:
+        "200":
+          description: OK
+    patch:
+      responses:
+        "200":
+          description: OK
+        "500":
+          description: Internal Server Error
+        "404":
+          description: Not Found
+    delete:
+      responses:
+        "204":
+          description: Operation Success
+        "500":
+          description: Internal Server Error
+        "404":
+          description: Not Found
